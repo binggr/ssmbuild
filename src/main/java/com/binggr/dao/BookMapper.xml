@@ -4,25 +4,26 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.binggr.dao.BookMapper">
     
-    <insert id="addBook" parameterMap="Books">
+    <insert id="addBook" parameterType="Books">
         insert into ssmbuild.books(bookName, bookCounts, detail)
         value (#{bookName},#{bookCounts},#{detail});
     </insert>
     
-    <delete id="deleteBookById" parameterMap="int">
-        delete from ssmbuild.books where  bookID = #{bookId}
+    <delete id="deleteBookById" parameterType="int">
+        delete from ssmbuild.books where  bookID=#{bookId}
     </delete>
 
-    <update id="updateBook" parameterMap="Books">
+    <update id="updateBook" parameterType="Books">
         update ssmbuild.books
         set bookName=#{bookName},bookCounts=#{bookCounts},detail=#{detail}
+        where bookID=#{bookID}
     </update>
 
-    <select id="queryBookById" resultMap="Books">
+    <select id="queryBookById" resultType="Books">
         select * from ssmbuild.books where bookID=#{bookId};
     </select>
 
-    <select id="queryAllBook" resultMap="Books">
+    <select id="queryAllBook" resultType="Books">
         select * from ssmbuild.books
     </select>
 </mapper>

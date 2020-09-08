@@ -20,7 +20,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.47</version>
+            <version>8.0.11</version>
         </dependency>
         <!-- 数据库连接池 -->
         <dependency>
@@ -74,8 +74,16 @@
             <artifactId>lombok</artifactId>
             <version>1.16.10</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.13</version>
+        </dependency>
     </dependencies>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <!--静态资源依赖包-->
     <build>
