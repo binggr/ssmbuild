@@ -29,6 +29,13 @@
             <div class="col-md-4 column">
                 <a class="btn btn-success" href="${pageContext.request.contextPath}/book/toAddBook">新增书籍</a>
             </div>
+            <div class="col-md-8 column">
+                <form method="post" action="${pageContext.request.contextPath}/book/queryBook" style="float: right">
+                    <input type="search" name="queryBookName" placeholder="请输入要查询书籍的名称" />
+                    <input type="submit" value="查询" class="btn btn-success"/>
+                    <span style="color: red">${error}</span>
+                </form>
+            </div>
         </div>
 
         <div class="row clearfix">

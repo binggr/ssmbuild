@@ -43,4 +43,11 @@ public interface BookMapper {
      * @return
      */
     List<Books> queryAllBook();
+
+    /**
+     * 通过书名查询图书
+     * @param bookName
+     * @return
+     */
+    Books queryBookByName(String bookName);
 }

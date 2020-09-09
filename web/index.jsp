@@ -28,7 +28,24 @@
   </head>
   <body>
       <h1>
-        <a href="${pageContext.request.contextPath}/book/allBook">进入书籍展示页面</a>
+          <a href="${pageContext.request.contextPath}/book/allBook">进入书籍展示页面</a>
+          <%--<a href="${pageContext.request.contextPath}/interceptor">拦截器测试</a>--%>
+      </h1>
+      <h1>
+          <a href="${pageContext.request.contextPath}/user/toLoginPage">登录</a>
+      </h1>
+      <h1>
+          <a href="${pageContext.request.contextPath}/user/toSuccessPage">成功</a>
+      </h1>
+      <h1>
+          <form class="form-inline" action="${pageContext.request.contextPath}/upload" enctype="multipart/form-data" method="post">
+              <input type="file" name="file"/>
+              <input type="submit" value="upload">
+          </form>
+      </h1>
+
+      <h1>
+          <a href="${pageContext.request.contextPath}/download">点击下载</a>
       </h1>
   </body>
 </html>

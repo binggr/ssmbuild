@@ -42,4 +42,11 @@ public interface BookService {
      * @return
      */
     List<Books> queryAllBook();
+
+    /**
+     * 通过名字查询书籍
+     * @param bookName
+     * @return
+     */
+    Books queryBookByName(String bookName);
 }
